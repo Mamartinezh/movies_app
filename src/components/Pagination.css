@@ -1,0 +1,75 @@
+
+
+:root {
+	--pagination-page-color: #252525;
+	--pagination-page-current-color: #000;
+}
+
+.darkmode {
+	--pagination-page-color: #ffffff;
+	--pagination-page-current-color: #000000;
+}
+
+.pagination {
+	padding: 50px;
+	width: 600px;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1rem;
+}
+
+.pagination > i {
+	background: #454545;
+	color: #151515;
+	border-radius: 5px;
+	padding: 5px;
+	cursor: pointer;
+	color: #ffffff;
+}
+
+.pagination > i[class*='disabled'] {
+	cursor: auto;
+	color: #222;
+}
+
+.page {
+	cursor: pointer;
+	color: var(--pagination-page-color);
+	position: relative;
+	padding: 5px 10px;
+	border: 1px solid #888888;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.page::before {
+/*	content: "";
+	border-bottom: 4px solid #454545;
+	position: absolute;
+	top: -3px;
+	left: 50%;
+	width: 0%;*/
+	/*transition: all 0.5s;*/
+}
+
+/*.page:not([class*="current-page"]):hover::before {
+	width: 100%;
+	left: 0%;
+}*/
+
+.current-page {
+	color: var(--pagination-page-current-color);
+	font-weight: 900;
+	border-color: #151515;
+	background: #fff;
+}
+
+@media (max-width: 620px) {
+
+	.pagination {
+		width: 100%;
+	}
+
+}

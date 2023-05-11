@@ -1,0 +1,45 @@
+
+
+:root {
+	--options-option-color: #000;
+	--options-option-selected-color: #fff;
+	--options-options-bg-hover: #757575;
+	--options-options-bg-selected: #555;
+}
+
+.darkmode {
+	--options-option-color: #fff;
+	--options-option-selected-color: #fff;
+	--options-options-bg-hover: #555555;
+	--options-options-bg-selected: #757575;	
+}
+
+.options-option {
+	padding: 0 20px;
+	height: 40px;
+	gap: 40px;
+	color: var(--options-option-color);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1rem;
+	font-weight: 900;
+}
+
+.options-option span {
+	white-space: nowrap;
+}
+
+.options-option > i {
+	text-shadow: 0 0 5px #fff;
+}
+
+.options-option:not(.selected):hover {
+	background: var(--options-options-bg-hover);
+}
+
+.options-option.selected {
+	background: var(--options-options-bg-selected);
+	color: var(--options-option-selected-color);
+}
+

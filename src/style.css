@@ -1,0 +1,104 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	font-family: monospace;
+}
+
+:root {
+	--app-bg-color: #fff;
+}
+
+.darkmode {
+	--app-bg-color: #252525;
+}
+
+body {
+	background: var(--app-bg-color);
+	display: flex;
+	justify-content: center;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	background: #757575;
+	width: 15px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: #ababab; 
+	border-radius: 10px;
+}
+
+.app {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.movies {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	text-align: center;
+	/*min-height: 100vh;*/
+	width: calc(330px * 3 + 40px * 2);
+	width: 100%;
+	padding: 0 50px;
+}
+
+.details {
+	position: fixed;
+	inset: 0;
+	margin: auto;
+	width: 600px;
+	height: 600px;
+	max-width: calc(100vw - 40px);
+	max-height: calc(100vh - 40px);
+	background: #000000;
+	box-shadow: 0 0 3px 0 #ffffff;
+	border-radius: 20px;
+	overflow: hidden;
+	z-index: 2;
+}
+
+.details-blur {
+	width: 100vw;
+	height: 100vh;
+	background: red;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: #252525aa;
+}
+
+.details-blur > i {
+	position: absolute;
+	top: 30px;
+	right: 50px;
+	color: #ffffff;
+	font-size: 2rem;
+	text-shadow: 0 0 15px #fff;
+	cursor: pointer;
+}
+
+
+@media (max-width:  600px) {
+
+
+	.details {
+		max-width: calc(100vw - 80px);
+		max-height: calc(100vh - 80px);
+	}
+
+	.details-blur > i {
+		top: 10px;
+		right: 10px;
+	}
+
+}

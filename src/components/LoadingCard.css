@@ -1,0 +1,49 @@
+
+
+.loading {
+	width: 100%;
+	height: 300px;
+	position: relative;
+}
+
+.loading > * {
+	position: absolute;
+	inset: 0;
+	margin: auto;	
+}
+
+.loading-img {
+	width: 60px;
+}
+
+.loading-out {
+	stroke: #ffffff;
+	stroke-dasharray: 188.50px;
+	stroke-dashoffset: 0px;
+	animation: outAnimation 4s infinite linear;
+}
+
+.loading-in {
+	stroke: #ffffff;
+	stroke-dasharray: 125.66px;
+	stroke-dashoffset: 0px;
+	animation: inAnimation 2s infinite linear;
+}
+
+@keyframes inAnimation {
+	0% {
+		stroke-dashoffset: 0px;
+	}
+	100% {
+		stroke-dashoffset: 251.33px;
+	}
+}
+
+@keyframes outAnimation {
+	0% {
+		stroke-dashoffset: 0px;
+	}
+	100% {
+		stroke-dashoffset: -377px;
+	}
+}
